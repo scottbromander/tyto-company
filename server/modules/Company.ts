@@ -1,8 +1,8 @@
-import { Employee } from "./Employee";
-import { Position } from "./enums/Position";
-import randomNumber from "./utils/randomNumber";
-import * as data from "./data/names.json";
-import { HistoryLog } from "./utils/HistoryLog";
+import { Employee } from './Employee';
+import { Position } from './enums/Position';
+import randomNumber from './utils/randomNumber';
+import * as data from './data/names.json';
+import { HistoryLog } from './utils/HistoryLog';
 
 class EmployeeObjectIndex {
   public employee: Employee;
@@ -20,8 +20,8 @@ export class Company {
   private employees: Employee[] = [];
   private historyLog: HistoryLog = new HistoryLog();
 
-  private readonly NUM_OF_STARTING_EMPLOYEES: number = 1200;
-  private readonly INTERVAL_TICK: number = 0.01 * 1000;
+  private readonly NUM_OF_STARTING_EMPLOYEES: number = 10;
+  private readonly INTERVAL_TICK: number = 1 * 1000;
 
   constructor() {}
 
@@ -51,7 +51,6 @@ export class Company {
       case 6:
       case 7:
       case 8:
-        console.log(randomChance);
         this.createEmployee();
         break;
       case 2:
